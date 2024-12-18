@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Phone Scraper",
+  "version": "1.0",
+  "description": "Quét số điện thoại trên màn hình và lưu vào file.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup/index.html",
+    "default_title": "Phone Scraper"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/phoneExtractor.js"]
+    }
+  ]
+}
